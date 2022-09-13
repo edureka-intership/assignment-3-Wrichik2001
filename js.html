@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment:3/title>
+</head>
+
+<body>
+	<h1 style="background-color: lightcoral;
+        margin-top: 20%;
+        color: whitesmoke;
+        padding: 10px;
+        text-align: center;">
+        <u>GO TO CONSOLE</u>
+    </h1>
+	<script>
+	class restaurantManager {
+		restaurantList = [{
+			name: "Bacchans Dhaba",
+			location: "Rashbehari",
+			city: "Kolkata"
+		}, {
+			name: "Gupta Brothers",
+			location: "New Alipore",
+			city: "Kolkata"
+		}, {
+			name: "Bukhara",
+			location: "Itc Maurya",
+			city: "New Delhi"
+		}, {
+			name: "Punjabi Tadka",
+			location: "Delhi",
+			city: "Delhi"
+		}, ];
+		printAllRestaurantNames() {
+			this.restaurantList.forEach((restaurant) => {
+				console.log(restaurant.name);
+			});
+		}
+	}
+	let obj = new restaurantManager();
+	obj.printAllRestaurantNames();
+	let city = ["Kolkata", "Kolkata", "New Delhi", "Delhi"]
+
+	function Kolkata(value) {
+		return value = Kolkata;
+	}
+	let cityKolkata = city.filter(Kolkata)
+	console.log(cityKolkata)
+	console.log("\n\n");
+	const orderData = {
+		"Below 500":20,
+		"500-1000":29,
+		"1000-1500":30,
+		"1500-2000":44,
+		"Above 2000":76
+	};
+	var totalOrderPlaced = 0;
+	const totalOrderArray = Object.values(orderData);
+	for(let i = 0; i < totalOrderArray.length; i++) {
+		totalOrderPlaced += totalOrderArray[i];
+	}
+	console.log(`Total number of orders placed= ${totalOrderPlaced}`);
+	const proportion = Object.keys(orderData).length;
+	console.log(`Total number of order proportions= ${proportion}`);
+	var outputArray = [];
+	var idd = 1;
+	for(let i in orderData) {
+		let o = new Object();
+		o.id = idd;
+		idd += 1;
+		o.order = i;
+		let ans = (orderData[i] * 100) / totalOrderPlaced;
+		o["order percentage"] = ans.toFixed(2);
+		o.restaurant = "Punjabi Tadka";
+		outputArray.push(o);
+	}
+	console.log("Array of Objects:");
+	for(let i = 0; i < outputArray.length; i++) {
+		console.log(outputArray[i]);
+	}
+	</script>
+</body>
+
+</html>
